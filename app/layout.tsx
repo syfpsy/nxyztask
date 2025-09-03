@@ -1,8 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import AuthHeader from '@/components/AuthHeader'
-import ThemeWrapper from '@/components/ThemeWrapper' // Import ThemeWrapper
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeWrapper> {/* Wrap children with ThemeWrapper */}
-          <AuthHeader />
-          {children}
-        </ThemeWrapper>
+        {children}
       </body>
     </html>
   )
